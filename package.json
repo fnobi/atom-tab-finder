@@ -1,7 +1,7 @@
 {
   "name": "atom-insert-image",
   "main": "./lib/atom-insert-image",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A short description of your package",
   "keywords": [],
   "repository": "https://github.com/fnobi/atom-insert-image",
