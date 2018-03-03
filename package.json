@@ -3,16 +3,15 @@
   "main": "./lib/atom-insert-image",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "atom-insert-image:toggle"
-  },
+  "keywords": [],
   "repository": "https://github.com/atom/atom-insert-image",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "atom-select-list": "^0.7.1",
+    "glob": "^7.1.2",
+    "lodash": "^4.17.5"
   }
 }
