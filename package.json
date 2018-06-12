@@ -1,7 +1,7 @@
 {
   "name": "atom-tab-finder",
   "main": "./lib/atom-tab-finder",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "find opening text-editor tab with incremental search.",
   "keywords": [],
   "repository": "https://github.com/fnobi/atom-tab-finder",
