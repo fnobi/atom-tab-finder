@@ -2,7 +2,7 @@
   "name": "atom-tab-finder",
   "main": "./lib/atom-tab-finder",
   "version": "1.0.3",
-  "description": "A short description of your package",
+  "description": "find opening text-editor tab with incremental search.",
   "keywords": [],
   "repository": "https://github.com/fnobi/atom-tab-finder",
   "license": "MIT",
