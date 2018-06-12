@@ -1,44 +1,44 @@
 'use babel';
 
-import AtomInsertImage from '../lib/atom-insert-image';
+import AtomTabFinder from '../lib/atom-tab-finder';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('AtomInsertImage', () => {
+describe('AtomTabFinder', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('atom-insert-image');
+    activationPromise = atom.packages.activatePackage('atom-tab-finder');
   });
 
-  describe('when the atom-insert-image:toggle event is triggered', () => {
+  describe('when the atom-tab-finder:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.atom-insert-image')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-tab-finder')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-insert-image:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-tab-finder:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.atom-insert-image')).toExist();
+        expect(workspaceElement.querySelector('.atom-tab-finder')).toExist();
 
-        let atomInsertImageElement = workspaceElement.querySelector('.atom-insert-image');
-        expect(atomInsertImageElement).toExist();
+        let atomTabFinderElement = workspaceElement.querySelector('.atom-tab-finder');
+        expect(atomTabFinderElement).toExist();
 
-        let atomInsertImagePanel = atom.workspace.panelForItem(atomInsertImageElement);
-        expect(atomInsertImagePanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'atom-insert-image:toggle');
-        expect(atomInsertImagePanel.isVisible()).toBe(false);
+        let atomTabFinderPanel = atom.workspace.panelForItem(atomTabFinderElement);
+        expect(atomTabFinderPanel.isVisible()).toBe(true);
+        atom.commands.dispatch(workspaceElement, 'atom-tab-finder:toggle');
+        expect(atomTabFinderPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,11 +51,11 @@ describe('AtomInsertImage', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.atom-insert-image')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-tab-finder')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-insert-image:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-tab-finder:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,10 +63,10 @@ describe('AtomInsertImage', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let atomInsertImageElement = workspaceElement.querySelector('.atom-insert-image');
-        expect(atomInsertImageElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'atom-insert-image:toggle');
-        expect(atomInsertImageElement).not.toBeVisible();
+        let atomTabFinderElement = workspaceElement.querySelector('.atom-tab-finder');
+        expect(atomTabFinderElement).toBeVisible();
+        atom.commands.dispatch(workspaceElement, 'atom-tab-finder:toggle');
+        expect(atomTabFinderElement).not.toBeVisible();
       });
     });
   });

@@ -1,10 +1,10 @@
 {
-  "name": "atom-insert-image",
-  "main": "./lib/atom-insert-image",
+  "name": "atom-tab-finder",
+  "main": "./lib/atom-tab-finder",
   "version": "1.0.3",
   "description": "A short description of your package",
   "keywords": [],
-  "repository": "https://github.com/fnobi/atom-insert-image",
+  "repository": "https://github.com/fnobi/atom-tab-finder",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
